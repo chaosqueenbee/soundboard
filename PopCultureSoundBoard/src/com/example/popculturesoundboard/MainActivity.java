@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 
 
@@ -19,6 +21,26 @@ public class MainActivity extends ActionBarActivity {
 	private OnItemSelectedListener itemSelectedListener = new OnItemSelectedListener() {
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+			ListView quoteList = (ListView) findViewById(R.id.quotes);
+			ArrayList<String> quotes = new ArrayList<String>();
+			quotes.add("Izzz it gut teeeeeth");
+			quotes.add("wuut the fuuuuck??");
+			quotes.add("Izzz it gut teeeeeth");
+			quotes.add("wuut the fuuuuck??");
+			quotes.add("Izzz it gut teeeeeth");
+			quotes.add("wuut the fuuuuck??");
+			quotes.add("Izzz it gut teeeeeth");
+			quotes.add("wuut the fuuuuck??");
+			quotes.add("Izzz it gut teeeeeth");
+			quotes.add("wuut the fuuuuck??");
+			quotes.add("Izzz it gut teeeeeth");
+			quotes.add("wuut the fuuuuck??");
+			quotes.add("Izzz it gut teeeeeth");
+			quotes.add("wuut the fuuuuck??");
+			int resId = getResources().getIdentifier("wtf", "raw", getPackageName());
+			MediaPlayer mp = MediaPlayer.create(MainActivity.this, resId);
+			mp.start();
+			quoteList.setAdapter(new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1,quotes));
 			
 		}
 		@Override
