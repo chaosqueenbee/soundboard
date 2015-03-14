@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Pop Culture Sound Board</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="characters_array">
+        <item>The Dictator</item>
+        <item>Katy Perry</item>
+    </string-array>
+
+</resources>
